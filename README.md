@@ -4,13 +4,13 @@
 课程主页：[6.S081: Operation System Energineering](https://pdos.csail.mit.edu/6.828/2021/schedule.html).
 
 # 实验进度
-- [x] Lab01 Utilities
-- [x] Lab02 System calls  
-- [x] Lab03 Page tables
-- [x] Lab04 Traps
-- [x] Lab05 Copy on-write
-- [x] Lab06 Multithreading
-- [x] Lab07 network driver
-- [x] Lab08 Lock
-- [x] Lab09 File system
-- [x] Lab10 mmap
+- [ ] Lab01 Utilities
+- [ ] Lab02 System calls  
+- [ ] Lab03 Page tables
+- [ ] Lab04 Traps
+- [ ] Lab05 Copy on-write
+- [ ] Lab06 Multithreading
+- [ ] Lab07 network driver
+- [ ] Lab08 Lock
+- [ ] Lab09 File system
+- [ ] Lab10 mmap
