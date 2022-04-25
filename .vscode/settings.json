@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "types.h": "c",
-        "*.tcc": "c"
+        "*.tcc": "c",
+        "param.h": "c",
+        "user.h": "c"
     }
 }
