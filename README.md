@@ -5,7 +5,7 @@
 
 # 实验进度
 - [x] [Lab01 Unix utilities](https://github.com/Deconx/MIT-6.S081/tree/util)
-- [ ] Lab02 System calls  
+- [ ] [Lab02 System calls](https://github.com/Deconx/MIT-6.S081/tree/syscall)  
 - [ ] Lab03 Page tables
 - [ ] Lab04 Traps
 - [ ] Lab05 Copy-on-write
