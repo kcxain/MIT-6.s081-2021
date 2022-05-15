@@ -7,7 +7,7 @@
 - [Lab1 Unix utilities 笔记](https://github.com/Deconx/MIT-6.S081/blob/master/Lab_notes/6.S081-Lab1%20Unix%20utilities.md)
 # 实验进度
 - [x] [Lab01 Unix utilities](https://github.com/Deconx/MIT-6.S081/tree/util)
-- [ ] [Lab02 System calls](https://github.com/Deconx/MIT-6.S081/tree/syscall)  
+- [x] [Lab02 System calls](https://github.com/Deconx/MIT-6.S081/tree/syscall)  
 - [ ] Lab03 Page tables
 - [ ] Lab04 Traps
 - [ ] Lab05 Copy-on-write
