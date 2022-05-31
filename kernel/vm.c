@@ -21,9 +21,13 @@ kvmmake(void)
 {
   pagetable_t kpgtbl;
 
+  //内核为顶级页表分配物理页面
   kpgtbl = (pagetable_t) kalloc();
+  
+  //将所有PTE条目置零
   memset(kpgtbl, 0, PGSIZE);
 
+  //映射每一个IO设备
   // uart registers
   kvmmap(kpgtbl, UART0, UART0, PGSIZE, PTE_R | PTE_W);
 
@@ -61,6 +65,7 @@ kvminit(void)
 void
 kvminithart()
 {
+  //页表地址写入satp寄存器
   w_satp(MAKE_SATP(kernel_pagetable));
   sfence_vma();
 }
@@ -134,6 +139,8 @@ kvmmap(pagetable_t kpgtbl, uint64 va, uint64 pa, uint64 sz, int perm)
 // physical addresses starting at pa. va and size might not
 // be page-aligned. Returns 0 on success, -1 if walk() couldn't
 // allocate a needed page-table page.
+// mappages(pagetable, USYSCALL, PGSIZE,
+//              (uint64)(p->usyscall), PTE_R | PTE_U
 int
 mappages(pagetable_t pagetable, uint64 va, uint64 size, uint64 pa, int perm)
 {
