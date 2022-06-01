@@ -439,3 +439,24 @@ copyinstr(pagetable_t pagetable, char *dst, uint64 srcva, uint64 max)
     return -1;
   }
 }
+void vmp(pagetable_t pagetable, int level)
+{
+   for(int i = 0; i < 512; i++){
+    pte_t pte = pagetable[i];
+    if(pte & PTE_V){
+      pagetable_t child = (pagetable_t)PTE2PA(pte);
+
+      if(level == 2) printf("..");
+      if(level == 1) printf(".. ..");
+      if(level == 0) printf(".. .. ..");
+      printf("%d: pte %p pa %p\n", i, pte, child);
+      if((pte & (PTE_R | PTE_W | PTE_X)) == 0)
+        vmp(child, level-1);
+    }
+  }
+}
+void vmprint(pagetable_t pagetable)
+{
+  printf("page table %p\n", pagetable);
+  vmp(pagetable, 2);
+}

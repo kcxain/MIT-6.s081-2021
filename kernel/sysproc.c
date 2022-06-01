@@ -81,6 +81,31 @@ int
 sys_pgaccess(void)
 {
   // lab pgtbl: your code here.
+  uint64 addr;
+  int num;
+  uint64 mask;
+
+  if(argaddr(0, &addr) < 0)
+    return -1;
+  if(argint(1, &num) < 0)
+    return -1;
+  if(argaddr(2, &mask) < 0)
+    return -1;
+  int limit = 64;
+  if(num > limit)
+    return -1;
+  pagetable_t pagetable = myproc()->pagetable;
+
+  uint64 bufmask = 0;
+  for(int i = 0; i < num; i++){
+    uint64 va = addr + i*PGSIZE;
+    pte_t *pte = walk(pagetable, va, 0);
+    if(*pte & PTE_A){
+      bufmask |= (1 << i);
+      *pte &= ~PTE_A;
+    }
+  }
+  copyout(pagetable, mask, (char *)&bufmask, sizeof(bufmask));
   return 0;
 }
 #endif
