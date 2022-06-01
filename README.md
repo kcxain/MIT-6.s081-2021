@@ -6,7 +6,7 @@
 对各个实验的深入解析文档，也可前往我的[知乎专栏](https://www.zhihu.com/column/c_1502374640542023680)获得更好的阅读体验
 - [Lab1 Unix utilities 笔记](https://github.com/Deconx/MIT-6.S081/blob/master/Lab_notes/6.S081-Lab1%20Unix%20utilities.md)
 - [Lab2 System calls 笔记](https://github.com/Deconx/MIT-6.S081/blob/master/Lab_notes/6.S081-Lab2%20System%20calls.md)
-- [Lab3 Page tables 笔记](https://github.com/Deconx/MIT-6.S081/blob/master/Lab_notes/6.S081-Lab2%20Page%20tables.md)
+- [Lab3 Page tables 笔记](https://github.com/Deconx/MIT-6.S081/blob/master/Lab_notes/6.S081-Lab3%20Page%20tables.md)
 # 实验进度
 - [x] [Lab01 Unix utilities](https://github.com/Deconx/MIT-6.S081/tree/util)
 - [x] [Lab02 System calls](https://github.com/Deconx/MIT-6.S081/tree/syscall)  
